@@ -1,10 +1,9 @@
 console.log("Hello via Bun!");
 // @ts-ignore
 import Catpcha from "node-captcha-generator";
-import fs from "node:fs";
 
 Bun.serve({
-  port: 8080,
+  port: 3000,
   async fetch(req: Request) {
     const captcha = await createCaptcha();
     const res = new Response(JSON.stringify(captcha), {
